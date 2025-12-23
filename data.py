@@ -1,4 +1,4 @@
-import pandas as pd
+import pandas as pd #解析excel套件
 import os
 import re
 
