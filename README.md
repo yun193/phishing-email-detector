@@ -16,11 +16,11 @@
 > 注意：原始資料檔案過大，未上傳至 GitHub。執行 `data.py` 前請自行下載以上資料集並放置正確路徑。
 
 ## 🚀 快速開始
-### 1. 安裝依賴
+### 1. 安裝套件
 ```bash
 pip install pandas scikit-learn seaborn nltk joblib fastapi uvicorn scipy
 ```
-### 2. 安裝依賴執行資料前處理（首次執行需下載原始 CSV）
+### 2. 執行資料前處理（首次執行需下載原始 CSV）
 ```bash
 python data.py
 ```
