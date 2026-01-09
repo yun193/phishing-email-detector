@@ -24,14 +24,13 @@ pip install pandas scikit-learn seaborn nltk joblib fastapi uvicorn scipy
 ```bash
 python data.py
 ```
-### 3. 啟動 API 服務
+### 3.測試模型
+方式 A：啟動 FastAPI 後端 API
 ```bash
 uvicorn app_fastapi:app --reload
 ```
-
-### 4.測試模型
 開啟瀏覽器訪問：
-<br>http://127.0.0.1:8000 → 歡迎頁面  
+http://127.0.0.1:8000 → 歡迎頁面  
 http://127.0.0.1:8000/docs → 互動式 API 文件（Swagger UI）</br>
 
 在 /docs 頁面測試 /predict 端點，範例輸入：
@@ -48,5 +47,15 @@ http://127.0.0.1:8000/docs → 互動式 API 文件（Swagger UI）</br>
   "message": "⚠️ 釣魚郵件！",
   "detail": "釣魚機率：98.29%"
 }
+```
+方式 B：啟動 Streamlit 前端介面
+```bash
+  streamlit run app_streamlit.py
+```
+<br>瀏覽器自動開啟 http://localhost:8501
+直接貼上郵件內容，按「偵測」按鈕，即可看到結果 + 資安提示（無需懂 API）</br>
+<br>範例測試郵件（貼到介面試試）：</br>
+```text
+Urgent! Your account will be suspended. Click here to verify: http://fake-bank.com !!! Win big prize now!
 ```
 
